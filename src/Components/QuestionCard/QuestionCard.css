@@ -1,0 +1,104 @@
+.ftn-forumle-question-container {
+    background-color: #363D46;
+    border-left: 12px solid #8A88D1;
+    padding: 20px 30px;
+    max-width: 800px;
+    width: 800px;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  }
+  
+  .question-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 35px;
+    border-bottom: 5px solid white;
+    padding: 0 0 10px 0px;
+  }
+  
+  .down-row {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+  
+  .answer-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 18px;
+  }
+  
+  .answer-div>input {
+    width: 330px;
+    height: 75px;
+    padding: 0 10px;
+    margin-top: 4px;
+    outline: none;
+    border:none;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+    transition: 200ms all ease;
+    font-size: 16px;
+  }
+  .answer-div>input:focus{
+    transform: scale(1.05);
+  }
+  
+  .answer-div>input::placeholder {
+    color: #505050;
+    font-size: 16px;
+  }
+  
+  .submit-btn {
+    font-size: 16px;
+    font-weight: 800;
+    padding: 14px 45px;
+    background-color: #8A88D1;
+    outline: none;
+    border: none;
+    box-shadow: inset;
+    color: #fff;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+    margin-top: 10px;
+    transition: 200ms all ease;
+  }
+  
+  .submit-btn:hover{
+    transform: scale(1.05);
+    background-color: #43ea91;
+  }
+  
+  .question-image{
+    background-color: white;
+    height: 220px;
+    aspect-ratio: 1/1;
+  }
+  
+  .resoults-tab{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+  
+  .resoults-tab p{
+    font-size: 21px;
+  }
+  
+  .your-answer{
+    font-size: 28px !important;
+    margin-bottom: -10px;
+  }
+  .answer-state{
+    color: #C97782;
+  }
+  
+  .correct-answer{
+    margin-top: 10px;
+    border-bottom: 3px solid #C97782;
+  }
