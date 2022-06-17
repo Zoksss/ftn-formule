@@ -34,6 +34,13 @@ const questions = [
         hasImage: false,
         imagePath: "/",
     },
+    {
+        category: "Vektori",
+        question: "cos(f) izmedju 2 vektora je:",
+        correctAnswer: "a*b/|a|*|b|",
+        hasImage: false,
+        imagePath: "/",
+    },
     
     
 ];

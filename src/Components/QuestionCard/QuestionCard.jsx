@@ -14,7 +14,7 @@ const QuestionCard = (props) => {
           <p className="question-number">{props.currentQuestion}/10</p>
         </div>
         <div className="down-row">
-          <div class="answer-div">
+          <div className="answer-div">
             <p>odgovor:</p>
             <input type="text" placeholder="npr. log5(3)*7/2" onChange={ (e) => {setInput(e.target.value)}}></input>
             { !isAnswer && <button className="submit-btn" onClick={() => {props.submitAnswer(input); setIsAnswer(true)}}>Proveri</button> }
