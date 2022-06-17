@@ -27,7 +27,7 @@
     align-items: center;
     justify-content: center; 
     flex-direction: column;  
-    overflow-y: scroll !important;
+    overflow-y: hidden;
 }
 
 .quiz-select-button-container > button{
