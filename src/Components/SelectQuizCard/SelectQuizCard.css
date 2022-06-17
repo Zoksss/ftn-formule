@@ -80,7 +80,7 @@
 }
 
 .quiz-select-button-container{
-    overflow-y:scroll;
+    overflow-y:hidden;
 }
 
 
