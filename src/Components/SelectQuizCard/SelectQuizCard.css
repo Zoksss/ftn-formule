@@ -27,7 +27,6 @@
     align-items: center;
     justify-content: center; 
     flex-direction: column;  
-    overflow-y: hidden;
 }
 
 .quiz-select-button-container > button{
@@ -79,9 +78,6 @@
     transition: 200ms all ease;
 }
 
-.quiz-select-button-container{
-    overflow-y:hidden;
-}
 
 
 @media only screen and (max-width: 550px) {
