@@ -23,14 +23,7 @@ const questions = [
     {
         category: "Vektori",
         question: "Duzina vektora |a| sa 2 kordinate:",
-        correctAnswer: "sqrt(x^+y^)",
-        hasImage: false,
-        imagePath: "/",
-    },
-    {
-        category: "Vektori",
-        question: "cos(f) izmedju 2 vektora je:",
-        correctAnswer: "a*b/|a|*|b|",
+        correctAnswer: "√(x²+y²)",
         hasImage: false,
         imagePath: "/",
     },
@@ -44,7 +37,7 @@ const questions = [
     {
         category: "Vektori",
         question: "Tacka S na sredini 2 tacke se racuna:",
-        correctAnswer: "(x1+x2/2,y1+x2/2)",
+        correctAnswer: "(x1+x2/2,y1+y2/2)",
         hasImage: false,
         imagePath: "/",
     },

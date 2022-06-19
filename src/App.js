@@ -12,6 +12,11 @@ const getRandom = (max) => {
   return Math.floor(Math.random() * (max - 0)) + 0;
 }
 
+const formatString = (string) => {
+  return string.replace(/\s+/g, '').toLowerCase();
+}
+
+
 let questions = questionsArr;
 
 let currentQuestionIndex = 0;
@@ -19,11 +24,16 @@ const App = () => {
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const [isCorrectAnswer, setIsCorrectAnswer] = React.useState(false);
   const [isQuizStarted, setIsQuizStarted] = React.useState(false);
+  const [extraOperationSign, setExtraOperationSign] = React.useState("");
+
+  React.useEffect(() => {
+    setExtraOperationSign("");
+  }, [extraOperationSign]);
 
 
   const submitAnswer = (userInput) => {
     console.log(userInput);
-    if (userInput === questions[currentQuestionIndex].correctAnswer) {
+    if (formatString(userInput) === questions[currentQuestionIndex].correctAnswer.toLowerCase()) {
       console.log("tacan odgovor");
       setIsCorrectAnswer(true);
       return;
@@ -78,15 +88,17 @@ const App = () => {
           submitAnswer={submitAnswer}
           isCorrectAnswer={isCorrectAnswer}
           nextQuestion={nextQuestion}
+          extraOperationSign={extraOperationSign}
         />
+      }
+      {isQuizStarted && <div className="extra-operations">
+        <button className="extra-operation-button" onClick={() => {setExtraOperationSign("²"); }}>n²</button>
+        <button className="extra-operation-button" onClick={() => {setExtraOperationSign("³"); }} >n³</button>
+        <button className="extra-operation-button"onClick={() => {setExtraOperationSign("√"); }} >√n</button>
+      </div> 
       }
     </div>
   );
 }
 
 export default App;
-
-
-/*
-
-*/

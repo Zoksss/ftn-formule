@@ -6,6 +6,11 @@ const QuestionCard = (props) => {
 
   const [isAnswer, setIsAnswer] = React.useState(false);
   const [input, setInput] = React.useState("");
+  
+  React.useEffect(() => {
+      setInput(prevInput => prevInput + props.extraOperationSign);
+      console.log(props.extraOperationSign);
+  }, [props.extraOperationSign]);
 
   return (
     <div className="ftn-forumle-question-container">
@@ -16,8 +21,8 @@ const QuestionCard = (props) => {
         <div className="down-row">
           <div className="answer-div">
             <p>odgovor:</p>
-            <input type="text" placeholder="npr. log5(3)*7/2" onChange={ (e) => {setInput(e.target.value)}}></input>
-            { !isAnswer && <button className="submit-btn" onClick={() => {props.submitAnswer(input); setIsAnswer(true)}}>Proveri</button> }
+            <input type="text" placeholder="npr. log5(3)*7/2" value = {input} onChange={ (e) => {setInput(e.target.value); }}></input>
+            { !isAnswer && <button className="submit-btn" onClick={() => {props.submitAnswer(input); setIsAnswer(true); setInput("")}}>Proveri</button> }
             {
               isAnswer && <div className="resoults-tab">
                 <p className="your-answer">Vas odgovor je <b className={props.isCorrectAnswer?"correct-answer-text":"wrong-answer-text"}> {props.isCorrectAnswer?"tacan!":"pogresan!"}</b></p>
