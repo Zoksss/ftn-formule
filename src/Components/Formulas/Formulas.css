@@ -1,0 +1,46 @@
+.formulas{
+    display: flex;
+    align-items: flex-start;
+    height: 70vh;
+    overflow-y: scroll;
+    flex-direction: column;
+    margin-top: 100px;
+    padding: 10px 40px;
+    overflow-x: hidden;
+}
+
+.formulas::-webkit-scrollbar {
+    width: 10px;
+    margin-left: 10px;
+}
+.formulas::-webkit-scrollbar-track{
+    background-color: #22242A;
+}
+.formulas::-webkit-scrollbar-thumb{
+    background-color: #606060;
+}
+
+.formulas-title-row{
+    display: flex;
+    justify-content: space-between;
+    font-size: 35px;
+    border-bottom: 5px solid white;
+    padding: 0 0 10px 0px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+.question-and-formula{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 18px;
+}
+
+.formula-answer{
+    margin-bottom: 15px;
+}
+
+.question-and-formula > p{
+    max-width: 300px;
+    text-align: left;
+}

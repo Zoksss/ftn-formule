@@ -5,6 +5,7 @@ import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import QuestionCard from './Components/QuestionCard/QuestionCard';
 import SelectQuizCard from './Components/SelectQuizCard/SelectQuizCard';
+import Formulas from "./Components/Formulas/Formulas"
 
 import questionsArr from './questions';
 
@@ -25,11 +26,13 @@ const App = () => {
   const [isCorrectAnswer, setIsCorrectAnswer] = React.useState(false);
   const [isQuizStarted, setIsQuizStarted] = React.useState(false);
   const [extraOperationSign, setExtraOperationSign] = React.useState("");
+  const [isFormulas, setIsFormulas] = React.useState(false);
 
   React.useEffect(() => {
     setExtraOperationSign("");
   }, [extraOperationSign]);
 
+  
 
   const submitAnswer = (userInput) => {
     console.log(userInput);
@@ -74,11 +77,11 @@ const App = () => {
 
   return (
     <div className="ftn-forume">
-      <Navbar />
-      {!isQuizStarted &&
+      <Navbar setIsFormulas={setIsFormulas}/>
+      {!isQuizStarted && !isFormulas &&
         <SelectQuizCard startQuiz={startQuiz} />
       }
-      {isQuizStarted &&
+      {isQuizStarted && !isFormulas &&
         <QuestionCard
           currentQuestion={currentQuestion}
           question={questions[currentQuestionIndex].question}
@@ -91,13 +94,15 @@ const App = () => {
           extraOperationSign={extraOperationSign}
         />
       }
-      {isQuizStarted && <div className="extra-operations">
-        <button className="extra-operation-button" onClick={() => {setExtraOperationSign("²"); }}>n²</button>
-        <button className="extra-operation-button" onClick={() => {setExtraOperationSign("³"); }} >n³</button>
-        <button className="extra-operation-button"onClick={() => {setExtraOperationSign("√"); }} >√n</button>
-      </div> 
+      {isQuizStarted && !isFormulas && <div className="extra-operations">
+        <button className="extra-operation-button" onClick={() => { setExtraOperationSign("²"); }}>n²</button>
+        <button className="extra-operation-button" onClick={() => { setExtraOperationSign("³"); }} >n³</button>
+        <button className="extra-operation-button" onClick={() => { setExtraOperationSign("√"); }} >√n</button>
+      </div>
       }
+      { isFormulas && <Formulas /> }
     </div>
+
   );
 }
 

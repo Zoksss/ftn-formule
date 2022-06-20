@@ -1,6 +1,7 @@
 import './Navbar.css';
 
-const Navbar = () => {
+
+const Navbar = (props) => {
   return (
     <nav>
         <div className="nav-logo">
@@ -8,8 +9,8 @@ const Navbar = () => {
           <p className="nav-logo-by-zoks">by Zoks</p>
         </div>
         <ul>
-          <li><a href="#">Kviz</a></li>
-          <li><a href="#">Formule</a></li>
+          <li><a href="#" onClick={() => props.setIsFormulas(false)}>Kviz</a></li>
+          <li><a href="#" onClick={() => props.setIsFormulas(true)}>Formule</a></li>
         </ul>
       </nav>
   )
