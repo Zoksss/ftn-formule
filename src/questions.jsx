@@ -163,7 +163,7 @@ const questions = [
     {
         category: "Planimetrija",
         question: "Povrsina trougla sa sinβ ",
-        correctAnswer: "P=a*b*sinβ/2",
+        correctAnswer: "P=a*c*sinβ/2",
         hasImage: false,
         imagePath: "/",
     },
@@ -216,10 +216,69 @@ const questions = [
         hasImage: false,
         imagePath: "/",
     },
-    
-    
-    
-    
+    {
+        category: "Proporcije i procenti",
+        question: "Kod direktne proporcionalnosti, k = ",
+        correctAnswer: "y/x",
+        hasImage: false,
+        imagePath: "/",
+    },
+    {
+        category: "Proporcije i procenti",
+        question: "Kod obrnute proporcionalnosti, k = ",
+        correctAnswer: "x*y",
+        hasImage: false,
+        imagePath: "/",
+    },
+    {
+        category: "Proporcije i procenti",
+        question: "120% u decimalnom obliku je:",
+        correctAnswer: "1.2",
+        hasImage: false,
+        imagePath: "/",
+    },
+    {
+        category: "Proporcije i procenti",
+        question: "63% u decimalnom obliku je:",
+        correctAnswer: "0.63",
+        hasImage: false,
+        imagePath: "/",
+    },
+    {
+        category: "Kompleksni brojevi",
+        question: "√-1",
+        correctAnswer: "i",
+        hasImage: false,
+        imagePath: "/",
+    },
+    {
+        category: "Kompleksni brojevi",
+        question: "Algebarski oblik kompleksnog broja:",
+        correctAnswer: "z=x+iy",
+        hasImage: false,
+        imagePath: "/",
+    },
+    {
+        category: "Kompleksni brojevi",
+        question: "Modul kompleksnog broja, |z| =",
+        correctAnswer: "√(x²+y²)",
+        hasImage: false,
+        imagePath: "/",
+    },
+    {
+        category: "Kompleksni brojevi",
+        question: "z = 2+6i, konjugovano z je:",
+        correctAnswer: "2-6i",
+        hasImage: false,
+        imagePath: "/",
+    },
+    {
+        category: "Kompleksni brojevi",
+        question: "tgφ (kompleksni brojevi), φ = ",
+        correctAnswer: "y/x",
+        hasImage: false,
+        imagePath: "/",
+    },
 ];
 
 export default questions;

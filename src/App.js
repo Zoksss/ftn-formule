@@ -21,6 +21,9 @@ const formatString = (string) => {
 let questions = questionsArr;
 
 let currentQuestionIndex = 0;
+
+
+
 const App = () => {
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const [isCorrectAnswer, setIsCorrectAnswer] = React.useState(false);
@@ -32,7 +35,6 @@ const App = () => {
     setExtraOperationSign("");
   }, [extraOperationSign]);
 
-  
 
   const submitAnswer = (userInput) => {
     console.log(userInput);
@@ -102,7 +104,6 @@ const App = () => {
       }
       { isFormulas && <Formulas /> }
     </div>
-
   );
 }
 
