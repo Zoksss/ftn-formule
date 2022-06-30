@@ -119,7 +119,7 @@ const questions = [
         imagePath: "/",
     },
     {
-        category: "Analitcka hiperbole",
+        category: "Analitcka geometrija",
         question: "Jednacina parabole",
         correctAnswer: "y²=2px",
         hasImage: false,
