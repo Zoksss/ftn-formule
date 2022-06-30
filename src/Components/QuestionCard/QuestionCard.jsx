@@ -10,7 +10,6 @@ const QuestionCard = (props) => {
 
   React.useEffect(() => {
     setInput(prevInput => prevInput + props.extraOperationSign);
-    console.log(props.extraOperationSign);
   }, [props.extraOperationSign]);
 
   const transition = useTransition(props.state, {
