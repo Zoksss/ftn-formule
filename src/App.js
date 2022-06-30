@@ -31,6 +31,9 @@ const App = () => {
   const [extraOperationSign, setExtraOperationSign] = React.useState("");
   const [isFormulas, setIsFormulas] = React.useState(false);
 
+  //!isFormulas
+  
+
   React.useEffect(() => {
     setExtraOperationSign("");
   }, [extraOperationSign]);
@@ -79,9 +82,9 @@ const App = () => {
 
   return (
     <div className="ftn-forume">
-      <Navbar setIsFormulas={setIsFormulas}/>
-      {!isQuizStarted && !isFormulas &&
-        <SelectQuizCard startQuiz={startQuiz} />
+      <Navbar setIsFormulas={setIsFormulas} />
+      {
+          <SelectQuizCard  startQuiz={startQuiz} state={!isFormulas && !isQuizStarted} />
       }
       {isQuizStarted && !isFormulas &&
         <QuestionCard
@@ -94,6 +97,7 @@ const App = () => {
           isCorrectAnswer={isCorrectAnswer}
           nextQuestion={nextQuestion}
           extraOperationSign={extraOperationSign}
+          state={isQuizStarted}
         />
       }
       {isQuizStarted && !isFormulas && <div className="extra-operations">
@@ -102,7 +106,7 @@ const App = () => {
         <button className="extra-operation-button" onClick={() => { setExtraOperationSign("√"); }} >√n</button>
       </div>
       }
-      { isFormulas && <Formulas /> }
+      {<Formulas state={isFormulas} />}
     </div>
   );
 }

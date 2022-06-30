@@ -7,7 +7,12 @@
   -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .question-row {
@@ -133,34 +138,39 @@
   background-color: #3bc37a;
 }
 
-.wrong-answer-text{
+.wrong-answer-text {
   color: #C97782;
 }
 
-.correct-answer-text{
+.correct-answer-text {
   color: #43ea91;
 }
 
 @media only screen and (max-width: 850px) {
-  body{
+  body {
     display: flex;
     justify-content: center;
   }
+
   .ftn-forumle-question-container {
     width: 400px;
     padding-left: -10px;
   }
-  .question, .question-number{
+
+  .question,
+  .question-number {
     font-size: 22px;
     text-align: left;
   }
-  .your-answer{
+
+  .your-answer {
     text-align: left;
     font-size: 20px !important;
     margin-top: -5px;
     margin-bottom: 5px;
   }
-  .next-question-btn{
+
+  .next-question-btn {
     width: 150px;
     right: 10px;
   }
