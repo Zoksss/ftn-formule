@@ -1,10 +1,91 @@
 const questions = [
     {
+        category: "Algebra",
+        question: "(a+b)²= ",
+        correctAnswer: "a²+2ab+b²",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 1
+    },
+    {
+        category: "Algebra",
+        question: "(a-b)²= ",
+        correctAnswer: "a²-2ab+b²",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 1
+    },
+    {
+        category: "Algebra",
+        question: "(a+b)³= ",
+        correctAnswer: "a³+3a²b+3ab²+b³",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 1
+    },
+    {
+        category: "Algebra",
+        question: "(a-b)³= ",
+        correctAnswer: "a³-3a²b+3ab²-b³",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 1
+    },
+    {
+        category: "Algebra",
+        question: "a²-b²= ",
+        correctAnswer: "(a-b)*(a+b)",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 1
+    },
+    {
+        category: "Algebra",
+        question: "a³-b³= ",
+        correctAnswer: "(a-b)*(a²+ab+b²)",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 1
+    },
+    {
+        category: "Algebra",
+        question: "a³+b³= ",
+        correctAnswer: "(a+b)*(a²-ab+b²)",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 1
+    },
+    {
+        category: "Jednacine",
+        question: "Determinanta D = ",
+        correctAnswer: "b²-4ac",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 2
+    },
+    {
+        category: "Jednacine",
+        question: "Vijetove formule, x1+x2= ",
+        correctAnswer: "-b/a",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 2
+    },
+    {
+        category: "Jednacine",
+        question: "Vijetove formule, x1*x2= ",
+        correctAnswer: "c/a",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 2
+    },
+    {
         category: "Vektori",
         question: "Vektori a i b su ortogonalni kad je:",
         correctAnswer: "a*b=0",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 5
     },
     {
         category: "Vektori",
@@ -12,6 +93,7 @@ const questions = [
         correctAnswer: "a=kb",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 5
     },
     {
         category: "Vektori",
@@ -19,6 +101,7 @@ const questions = [
         correctAnswer: "(axb)*c=0",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 5
     },
     {
         category: "Vektori",
@@ -26,6 +109,7 @@ const questions = [
         correctAnswer: "√(x²+y²)",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 5
     },
     {
         category: "Vektori",
@@ -33,6 +117,7 @@ const questions = [
         correctAnswer: "a*b/|a|*|b|",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 5
     },
     {
         category: "Vektori",
@@ -40,6 +125,7 @@ const questions = [
         correctAnswer: "(x1+x2/2,y1+y2/2)",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 5
     },
     {
         category: "Vektori",
@@ -47,6 +133,7 @@ const questions = [
         correctAnswer: "AC",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 5
     },
     {
         category: "Vektori",
@@ -54,6 +141,7 @@ const questions = [
         correctAnswer: "30",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 5
     },
     {
         category: "Analitcka geometrija",
@@ -61,6 +149,7 @@ const questions = [
         correctAnswer: "y=kx+n",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 6
     },
     {
         category: "Analitcka geometrija",
@@ -68,6 +157,7 @@ const questions = [
         correctAnswer: "y-y1=k(x-x1)",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 6
     },
     {
         category: "Analitcka geometrija",
@@ -75,6 +165,7 @@ const questions = [
         correctAnswer: "y-y1=y2-y1/x2-x1(x-x1)",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 6
     },
     {
         category: "Analitcka geometrija",
@@ -82,6 +173,7 @@ const questions = [
         correctAnswer: "-1/k1",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 6
     },
     {
         category: "Analitcka geometrija",
@@ -89,6 +181,7 @@ const questions = [
         correctAnswer: "k2-k1/1+k1*k2",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 6
     },
     {
         category: "Analitcka geometrija",
@@ -96,6 +189,7 @@ const questions = [
         correctAnswer: "(x-p)²+(y-q)²=r²",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 6
     },
     {
         category: "Analitcka geometrija",
@@ -103,6 +197,7 @@ const questions = [
         correctAnswer: "O(6,3)",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 6
     },
     {
         category: "Analitcka geometrija",
@@ -110,6 +205,7 @@ const questions = [
         correctAnswer: "x²/a²+y²/b²=1",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 6
     },
     {
         category: "Analitcka geometrija",
@@ -117,6 +213,7 @@ const questions = [
         correctAnswer: "x²/a²-y²/b²=1",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 6
     },
     {
         category: "Analitcka geometrija",
@@ -124,6 +221,7 @@ const questions = [
         correctAnswer: "y²=2px",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 6
     },
     {
         category: "Planimetrija",
@@ -131,6 +229,7 @@ const questions = [
         correctAnswer: "180",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 7
     },
     {
         category: "Planimetrija",
@@ -138,6 +237,7 @@ const questions = [
         correctAnswer: "360",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 7
     },
     {
         category: "Planimetrija",
@@ -145,6 +245,7 @@ const questions = [
         correctAnswer: "P=a*ha/2",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 7
     },
     {
         category: "Planimetrija",
@@ -152,6 +253,7 @@ const questions = [
         correctAnswer: "O=a+b+c",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 7
     },
     {
         category: "Planimetrija",
@@ -159,6 +261,7 @@ const questions = [
         correctAnswer: "P=r*(a+b+c/2)",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 7
     },
     {
         category: "Planimetrija",
@@ -166,6 +269,7 @@ const questions = [
         correctAnswer: "P=a*c*sinβ/2",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 7
     },
     {
         category: "Planimetrija",
@@ -173,6 +277,7 @@ const questions = [
         correctAnswer: "r=2P/O",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 7
     },
     {
         category: "Planimetrija",
@@ -180,6 +285,7 @@ const questions = [
         correctAnswer: "r=2P/O",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 7
     },
     {
         category: "Planimetrija",
@@ -187,6 +293,7 @@ const questions = [
         correctAnswer: "a/sinα=R2",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 7
     },
     {
         category: "Planimetrija",
@@ -194,6 +301,7 @@ const questions = [
         correctAnswer: "c²=a²+b²",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 7
     },
     {
         category: "Planimetrija",
@@ -201,6 +309,7 @@ const questions = [
         correctAnswer: "P=a²√3/4",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 7
     },
     {
         category: "Planimetrija",
@@ -208,6 +317,7 @@ const questions = [
         correctAnswer: "h=a√3/2",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 7
     },
     {
         category: "Planimetrija",
@@ -215,6 +325,7 @@ const questions = [
         correctAnswer: "P=r²π",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 7
     },
     {
         category: "Proporcije i procenti",
@@ -222,6 +333,7 @@ const questions = [
         correctAnswer: "y/x",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 11
     },
     {
         category: "Proporcije i procenti",
@@ -229,6 +341,7 @@ const questions = [
         correctAnswer: "x*y",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 11
     },
     {
         category: "Proporcije i procenti",
@@ -236,6 +349,7 @@ const questions = [
         correctAnswer: "1.2",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 11
     },
     {
         category: "Proporcije i procenti",
@@ -243,6 +357,103 @@ const questions = [
         correctAnswer: "0.63",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 11
+    },
+    {
+        category: "Integrali",
+        question: "∫x^n*dx",
+        correctAnswer: "x^(n + 1)/(n + 1)+C",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 13
+    },
+    {
+        category: "Integrali",
+        question: "∫dx",
+        correctAnswer: "x+C",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 13
+    },
+    {
+        category: "Integrali",
+        question: "∫e^x*dx=",
+        correctAnswer: "e^x + C",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 13
+    },
+    {
+        category: "Integrali",
+        question: "∫1/x*dx",
+        correctAnswer: "log|x|+C",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 13
+    },
+    {
+        category: "Integrali",
+        question: "∫a^x*dx = ",
+        correctAnswer: "a^x/loga+C",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 13
+    },
+    {
+        category: "Integrali",
+        question: "∫cosx*dx=",
+        correctAnswer: "sinx+C",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 13
+    },
+    {
+        category: "Integrali",
+        question: "∫sinx*dx=",
+        correctAnswer: "-cos+C",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 13
+    },
+    {
+        category: "Integrali",
+        question: "∫dx/cos²x*dx=",
+        correctAnswer: "tgx+C",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 13
+    },
+    {
+        category: "Integrali",
+        question: "∫dx/sin²x*dx=",
+        correctAnswer: "-ctgx+C",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 13
+    },
+    {
+        category: "Integrali",
+        question: "∫dx/1+x²*dx=",
+        correctAnswer: "arctgx+C",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 13
+    },
+    {
+        category: "Integrali",
+        question: "∫dx/√(1-x²)*dx=",
+        correctAnswer: "arcsinx+C",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 13
+    },
+    {
+        category: "Integrali",
+        question: "∫dx/√(a²-x²)*dx=",
+        correctAnswer: "arcsin(x/a)+C",
+        hasImage: false,
+        imagePath: "/",
+        categoryNumber: 13
     },
     {
         category: "Kompleksni brojevi",
@@ -250,6 +461,7 @@ const questions = [
         correctAnswer: "i",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 14
     },
     {
         category: "Kompleksni brojevi",
@@ -257,6 +469,7 @@ const questions = [
         correctAnswer: "z=x+iy",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 14
     },
     {
         category: "Kompleksni brojevi",
@@ -264,6 +477,7 @@ const questions = [
         correctAnswer: "√(x²+y²)",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 14
     },
     {
         category: "Kompleksni brojevi",
@@ -271,6 +485,7 @@ const questions = [
         correctAnswer: "2-6i",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 14
     },
     {
         category: "Kompleksni brojevi",
@@ -278,7 +493,9 @@ const questions = [
         correctAnswer: "y/x",
         hasImage: false,
         imagePath: "/",
+        categoryNumber: 14
     },
 ];
 
 export default questions;
+//² ³ √

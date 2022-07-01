@@ -12,7 +12,7 @@ const generateQuestions = () => {
         if (!x) {
             // add new category
             usedCategories.push(question.category);
-            let obj = { question: "category", correctAnswer: question.category };
+            let obj = { question: "category", correctAnswer: question.category, categoryNum: question.categoryNumber};
             t.push(obj);
             return;
         }
@@ -24,7 +24,7 @@ const generateQuestions = () => {
 
 const Formulas = (props) => {
     const questions = generateQuestions().map(element => {
-        return (element.question != "category" ? <Formula question={element.question} answer={element.correctAnswer} /> : <div className="formulas-title-row"><p>{element.correctAnswer}</p><p>5</p></div>)
+        return (element.question !== "category" ? <Formula question={element.question} answer={element.correctAnswer} /> : <div className="formulas-title-row"><p>{element.correctAnswer}</p><p>{element.categoryNum}</p></div>)
     });
 
     const transition = useTransition(props.state, {
