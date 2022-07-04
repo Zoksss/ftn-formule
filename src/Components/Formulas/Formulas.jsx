@@ -33,6 +33,8 @@ const Formulas = (props) => {
         leave: { x: -150, y: 0, opacity: 0 },
     });
 
+    
+
     return (
         <>
             {transition((style, item) =>
