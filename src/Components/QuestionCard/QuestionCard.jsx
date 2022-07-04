@@ -10,6 +10,9 @@ const QuestionCard = (props) => {
 
   React.useEffect(() => {
     setInput(prevInput => prevInput + props.extraOperationSign);
+    console.log(mainInput);
+    mainInput.current.focus();
+    
   }, [props.extraOperationSign]);
 
   const transition = useTransition(props.state, {
@@ -17,6 +20,8 @@ const QuestionCard = (props) => {
     enter: { x: 0, y: 0, opacity: 1 },
     leave: { x: -150, y: 0, opacity: 0 },
   });
+
+  const mainInput = React.useRef(null);
 
   return (
     <>
@@ -30,7 +35,7 @@ const QuestionCard = (props) => {
             <div className="down-row">
               <div className="answer-div">
                 <p>odgovor:</p>
-                <input type="text" placeholder="npr. log5(3)*7/2" value={input} onChange={(e) => { setInput(e.target.value); }}></input>
+                <input ref={mainInput} type="text" placeholder="npr. log5(3)*7/2" value={input} onChange={(e) => { setInput(e.target.value); }}></input>
                 {!isAnswer && <button className="submit-btn" onClick={() => { props.submitAnswer(input); setIsAnswer(true); setInput("") }}>Proveri</button>}
                 {
                   isAnswer && <div className="resoults-tab">
