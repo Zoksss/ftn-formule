@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ftn-formule/static/css/main.96ba2f00.css",
-    "main.js": "/ftn-formule/static/js/main.8f3bbcd1.js",
+    "main.js": "/ftn-formule/static/js/main.9bd9433f.js",
     "index.html": "/ftn-formule/index.html",
     "main.96ba2f00.css.map": "/ftn-formule/static/css/main.96ba2f00.css.map",
-    "main.8f3bbcd1.js.map": "/ftn-formule/static/js/main.8f3bbcd1.js.map"
+    "main.9bd9433f.js.map": "/ftn-formule/static/js/main.9bd9433f.js.map"
   },
   "entrypoints": [
     "static/css/main.96ba2f00.css",
-    "static/js/main.8f3bbcd1.js"
+    "static/js/main.9bd9433f.js"
   ]
 }
