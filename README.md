@@ -40,8 +40,6 @@
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
