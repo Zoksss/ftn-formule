@@ -88,9 +88,7 @@ const App = () => {
   return (
     <div className="ftn-forume">
       <Navbar setIsFormulas={setIsFormulas} returnToHome={returnToHome} />
-      {
         <SelectQuizCard startQuiz={startQuiz} state={!isFormulas && !isQuizStarted} />
-      }
       {isQuizStarted && !isFormulas &&
         <QuestionCard
           currentQuestion={currentQuestion}
@@ -109,6 +107,7 @@ const App = () => {
         <div>
           <button className="extra-operation-button" onClick={() => { setExtraOperationSign("²"); }}>n²</button>
           <button className="extra-operation-button" onClick={() => { setExtraOperationSign("³"); }} >n³</button>
+          <button className="extra-operation-button" onClick={() => { setExtraOperationSign("^x"); }} >n^x</button>
           <button className="extra-operation-button" onClick={() => { setExtraOperationSign("√"); }} >√n</button>
         </div>
         <div>
