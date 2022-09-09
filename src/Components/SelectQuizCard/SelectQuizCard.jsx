@@ -22,9 +22,9 @@ const SelectQuizCard = (props) => {
                     </div>
                     <div className="quiz-select-button-container">
                         <Quiz number="0" title="Sve oblasti" startQuiz={props.startQuiz} />
-                        <Quiz number="1" title="Algebra" />
-                        <Quiz number="2" title="Jednacine" />
-                        <Quiz number="3" title="Eksponencijalne i logaritmi" />
+                        <Quiz number="1" title="Algebra" startQuiz={props.startQuiz}/>
+                        <Quiz number="2" title="Jednacine" startQuiz={props.startQuiz}/>
+                        <Quiz number="3" title="Eksponencijalne i logaritmi"/>
                         <Quiz number="4" title="Triganometrija" />
                         <Quiz number="5" title="Vektori" startQuiz={props.startQuiz} />
                         <Quiz number="6" title="Analitcka geometrija" startQuiz={props.startQuiz} />
@@ -34,7 +34,7 @@ const SelectQuizCard = (props) => {
                         <Quiz number="10" title="Indukcija i kombinatorika" />
                         <Quiz number="11" title="Proporcije i procenti" startQuiz={props.startQuiz} />
                         <Quiz number="12" title="Realne funkcije" />
-                        <Quiz number="13" title="Integrali" />
+                        <Quiz number="13" title="Integrali" startQuiz={props.startQuiz}/>
                         <Quiz number="14" title="Kompleksni brojevi" startQuiz={props.startQuiz} />
                     </div>
                 </animated.div> : ""
