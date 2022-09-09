@@ -4,15 +4,15 @@ import './Navbar.css';
 const Navbar = (props) => {
   return (
     <nav>
-        <div className="nav-logo">
-          <p>FTNFormule</p>
-          <p className="nav-logo-by-zoks">by Zoks</p>
-        </div>
-        <ul>
-          <li><a href="#" onClick={() => props.setIsFormulas(false)}>Kviz</a></li>
-          <li><a href="#" onClick={() => props.setIsFormulas(true)}>Formule</a></li>
-        </ul>
-      </nav>
+      <a href="#" role="button" className="nav-logo" onClick={() => { props.returnToHome(); return false; }}>
+        <p>FTNFormule</p>
+        <p className="nav-logo-by-zoks">by Zoks</p>
+      </a>
+      <ul>
+        <li><a href="#" role="button" onClick={() => { props.setIsFormulas(false); return false; }}>Kviz</a></li>
+        <li><a href="#" role="button" onClick={() => { props.setIsFormulas(true); return false; }}>Formule</a></li>
+      </ul>
+    </nav>
   )
 }
 

@@ -23,8 +23,8 @@ const generateQuestions = () => {
 
 
 const Formulas = (props) => {
-    const questions = generateQuestions().map(element => {
-        return (element.question !== "category" ? <Formula question={element.question} answer={element.correctAnswer} /> : <div className="formulas-title-row"><p>{element.correctAnswer}</p><p>{element.categoryNum}</p></div>)
+    const questions = generateQuestions().map((element, i) => {
+        return (element.question !== "category" ? <Formula key={i} question={element.question} answer={element.correctAnswer} /> : <div key={i} className="formulas-title-row"><p>{element.correctAnswer}</p><p>{element.categoryNum}</p></div>)
     });
 
     const transition = useTransition(props.state, {

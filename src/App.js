@@ -18,13 +18,14 @@ const formatString = (string) => {
 }
 
 
-let questions = questionsArr;
+
+
 
 let currentQuestionIndex = 0;
 
-
-
 const App = () => {
+
+  let questions = questionsArr;
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const [isCorrectAnswer, setIsCorrectAnswer] = React.useState(false);
   const [isQuizStarted, setIsQuizStarted] = React.useState(false);
@@ -50,8 +51,8 @@ const App = () => {
     setIsCorrectAnswer(false);
   }
 
-  const nextQuestion = () => {
-    if (currentQuestion === 10) {
+  const nextQuestion = (info) => {
+    if (currentQuestion === 10 || info == "restart") {
       // end screen
       console.log("restart");
       setIsQuizStarted(false);
@@ -80,9 +81,13 @@ const App = () => {
 
   }
 
+  const returnToHome = () => {
+    nextQuestion("restart");
+  }
+
   return (
     <div className="ftn-forume">
-      <Navbar setIsFormulas={setIsFormulas} />
+      <Navbar setIsFormulas={setIsFormulas} returnToHome={returnToHome} />
       {
         <SelectQuizCard startQuiz={startQuiz} state={!isFormulas && !isQuizStarted} />
       }

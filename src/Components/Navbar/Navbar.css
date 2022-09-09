@@ -26,6 +26,9 @@ nav{
   .nav-logo{
     display: flex;
     align-items: flex-end;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
   }
   .nav-logo-by-zoks{
     font-size: 18px !important;

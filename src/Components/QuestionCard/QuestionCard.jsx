@@ -10,7 +10,6 @@ const QuestionCard = (props) => {
 
   React.useEffect(() => {
     setInput(prevInput => prevInput + props.extraOperationSign);
-    console.log(mainInput);
     mainInput.current.focus();
     
   }, [props.extraOperationSign]);
