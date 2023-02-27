@@ -6,6 +6,7 @@ import Navbar from './Components/Navbar/Navbar';
 import QuestionCard from './Components/QuestionCard/QuestionCard';
 import SelectQuizCard from './Components/SelectQuizCard/SelectQuizCard';
 import Formulas from "./Components/Formulas/Formulas"
+import Resoults from './Components/Resoults/Resoults';
 
 import questionsArr from './questions';
 
@@ -25,12 +26,13 @@ let currentQuestionIndex = 0;
 
 const App = () => {
 
-  let questions = questionsArr;
+  const [questions, setQuestions] = React.useState(questionsArr);
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const [isCorrectAnswer, setIsCorrectAnswer] = React.useState(false);
   const [isQuizStarted, setIsQuizStarted] = React.useState(false);
   const [extraOperationSign, setExtraOperationSign] = React.useState("");
   const [isFormulas, setIsFormulas] = React.useState(false);
+  const [isResoluts, setIsResoluts] = React.useState(false);
 
   //!isFormulas
 
@@ -52,44 +54,50 @@ const App = () => {
   }
 
   const nextQuestion = (info) => {
-    if (currentQuestion === 10 || info == "restart") {
+    if (currentQuestion === 10 || info === "restart") {
       // end screen
+      setIsResoluts(true);
       console.log("restart");
-      setIsQuizStarted(false);
+      //setIsQuizStarted(false);
       setCurrentQuestion(0);
       return
     }
-    currentQuestionIndex = getRandom(questions.length);
+    currentQuestionIndex = getRandom(questions.length-1);
     setCurrentQuestion(prevCurrentQuestion => prevCurrentQuestion + 1);
     setIsCorrectAnswer(null);
 
   }
 
   const startQuiz = (oblast) => {
-    console.log(oblast);
     setCurrentQuestion(0);
-    if (oblast === "Sve oblasti") {
-      questions = questionsArr;
+    setQuestions(questionsArr);
+    if (oblast !== "Sve oblasti") {
+      let sortiraniNiz = [];
+      for (let i = 0; i < questions.length; i++)
+        if (questions[i].category === oblast) sortiraniNiz.push(questions[i]);
+      setQuestions(sortiraniNiz);
       setIsQuizStarted(true);
       return;
     }
-    let sortiraniNiz = [];
-    for (let i = 0; i < questions.length; i++)
-      if (questions[i].category === oblast) sortiraniNiz.push(questions[i]);
-    questions = sortiraniNiz;
+
+    setQuestions(questionsArr);
     setIsQuizStarted(true);
+    return;
 
   }
 
   const returnToHome = () => {
     nextQuestion("restart");
+    setQuestions(questionsArr);
+    setCurrentQuestion(0);
   }
 
   return (
     <div className="ftn-forume">
       <Navbar setIsFormulas={setIsFormulas} returnToHome={returnToHome} />
-        <SelectQuizCard startQuiz={startQuiz} state={!isFormulas && !isQuizStarted} />
-      {isQuizStarted && !isFormulas &&
+      {isResoluts && !isFormulas&& < Resoults setIsResoluts={setIsResoluts} setIsQuizStarted={setIsQuizStarted}/>}
+      <SelectQuizCard startQuiz={startQuiz} state={!isFormulas && !isQuizStarted} />
+      {isQuizStarted && !isFormulas && !isResoluts &&
         <QuestionCard
           currentQuestion={currentQuestion}
           question={questions[currentQuestionIndex].question}
@@ -118,7 +126,7 @@ const App = () => {
         </div>
       </div>
       }
-      {<Formulas state={isFormulas} />}
+      {<Formulas state={isFormulas} />} 
     </div>
   );
 }

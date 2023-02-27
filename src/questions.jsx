@@ -410,7 +410,7 @@ const questions = [
     {
         category: "Integrali",
         question: "∫sinx*dx=",
-        correctAnswer: "-cos+C",
+        correctAnswer: "-cosx+C",
         hasImage: false,
         imagePath: "/",
         categoryNumber: 13
