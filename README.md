@@ -25,6 +25,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+FTN Formule is simple learning quiz app. It is made for students learning math formulas, especially ones toward FTN University in Novi Sad, Serbia. It is build with React along with React.Spring for animations. SCSS is used for compact styling.
+<br>
 
 [![Product Name Screen Shot][product-screenshot]](https://github.com/Zoksss/ftn-formule)
 
