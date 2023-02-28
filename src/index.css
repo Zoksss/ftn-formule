@@ -21,12 +21,12 @@ code {
 
 
 .background-blurry-blob{
+  position: fixed;
   background: #fff;
   width: 80%;
   height: 100%;
   transform: rotate(60deg);
   z-index: -10;
-  position: absolute;
   top: -25%;
   left: -30%;
   background: radial-gradient(circle, rgb(43, 43, 66) 0%, rgba(34,36,42,1) 58%);
